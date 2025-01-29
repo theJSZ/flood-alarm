@@ -20,9 +20,10 @@ const unsigned long int TIME_TO_TRIGGER_ALARM = 60000;
 const unsigned long int TIME_TO_TRIGGER_TEST = 2000;
 
 // add emergency contact phone numbers to this array
+// as many as necessary
 char phone_numbers[][14] = {
-  "+358503559944",
-  "+358504633614"
+  "+358xxxxxxxxx",
+  "+358xxxxxxxxx"
 };
 int PHONE_NUMBER_COUNT = sizeof(phone_numbers) / sizeof(phone_numbers[0]);
 
@@ -73,7 +74,6 @@ bool send_sms(String message) {
 void setup() {
   pinMode(BUTTON_PIN, INPUT);
   attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), button_pressed, RISING);
-
 }
 
 
